@@ -17,3 +17,13 @@ body {
   color: var(--colour);
   font-size: 10em;
 }
+
+.mithril-container{
+  padding: 1rem;
+}
+
+.canvas {
+  width: 600px;
+  height: 400px;
+  border: 1px solid black;
+}

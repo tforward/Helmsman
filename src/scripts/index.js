@@ -1,6 +1,10 @@
 "use strict";
 
 import css_ from "../css/styles.css";
+import { mithrilRender, rootInit } from "./MithrilConfig";
+import m from "../../node_modules/mithril/mithril";
+
+import { draw } from "./mapCanvas";
 
 const myApp = Object.create(null);
 // ======================================================================
@@ -8,6 +12,12 @@ const myApp = Object.create(null);
 // ======================================================================
 
 myApp.main = function main() {
+  const mithrilContainer = document.getElementById(
+    "mithril-container-id_1"
+  );
+  const root = rootInit(mithrilContainer);
+  mithrilRender(root);
+  // draw();
   // Start here
   // http://randycoulman.com/blog/2016/02/16/using-ramda-with-redux/
   // https://hackernoon.com/shape-your-redux-store-like-your-database-98faa4754fd5
